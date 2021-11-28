@@ -19,5 +19,6 @@ class Redis:
         del self.data[self.db][key]
         return True
     def avaiable_words(self, list_of_words):
+        """Returns a set of available from the list of words"""
         return set(w for w in list_of_words if w in self.data[self.db])
         
